@@ -205,7 +205,7 @@ That's all, we don't use `Angular Elements APIs`, but only use `Dynamic Componen
 So `@angular/elements` basically organize the logic above into several module and make them easy to read, to maintain, to extend.
 
 - [create-custom-element.ts](https://github.com/angular/angular/blob/master/packages/elements/src/create-custom-element.ts), this module will implement `Custom Element callbacks`, and initialize a NgElementStrategy as the `bridge` to connect `Angular Component` to `Custom Elements`. Now we only have one `Strategy` which is `component-factory-strategy.ts`, which will use the logic we explained to do the bridge. In the future, we may have other `Strategy`, we can also implement the `Strategy` outselves.
-- component-factory-strategy.ts, Creates and destroys a component ref using a component factory and handles change detection in response to input changes. The code we have explained above.
+- [component-factory-strategy.ts](https://github.com/angular/angular/blob/master/packages/elements/src/component-factory-strategy.ts), Creates and destroys a component ref using a component factory and handles change detection in response to input changes. The code we have explained above.
 
 That's how `Angular Elements` implement `Custom Elements`, we will explain the `@Output` with `Custom Events` in the next article.
 

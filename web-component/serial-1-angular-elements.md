@@ -10,7 +10,7 @@ You can find all details about `Custom Element` [here](https://developers.google
 
 With Custom Elements, web developers can create new HTML tags, beef-up existing HTML tags, or extend the components other developers have authored.
 
-For example, we want to create a `app-hello` tag, with a `name` and a `disabled` attribute.
+For example, we want to create a `app-hello` tag, with a `name` attribute.
 
 We will use them like below just like use normal `HTML Element`. We will not use `ShadowDom` which is not must have in `Custom Element`, it will be another topic and we will talk in another article.
 
@@ -65,7 +65,8 @@ This is a pretty simple `Custom Element`.
 1. `app-hello` wrapper a text node.
 2. the text node will display the `name` attribute of `app-hello`.
 
-|---|---|
+| callback | summary |
+| --- | --- |
 |constructor|initialize state or shadowRoot if needed, in this article, we don't need it|
 |connectedCallback|Will be called when element is added to DOM (another case is upgrade, will not be discussed here), we will initialize our DOM and event listener here|
 |disconnctedCallback|Will be called when element is removed from DOM, we will clear our DOM and event listener here|
@@ -116,7 +117,8 @@ class HelloComponentClass extends HTMLElement {
 ```
 
 So the mapping looks like,
-|---|---|---|
+| callback | summary | angular part |
+| --- | --- | --- |
 |constructor|initialize internalstate|do some preparation work|
 |connectedCallback|initialize View/Event Listener|Load Angular Component|
 |disconnectedCallback|clear View/Event Listener|Destroy Angular Component|

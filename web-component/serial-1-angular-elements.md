@@ -117,6 +117,7 @@ class HelloComponentClass extends HTMLElement {
 ```
 
 So the mapping looks like,
+
 | callback | summary | angular part |
 | --- | --- | --- |
 |constructor|initialize internalstate|do some preparation work|
